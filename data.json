@@ -1,0 +1,90 @@
+{
+  "teams": [
+    [
+      {
+        "name": "Italy",
+        "flag": "ita"
+      },
+      {
+        "name": "France",
+        "flag": "fra"
+      }
+    ],
+    [
+      {
+        "name": "Greek",
+        "flag": "gre"
+      },
+      {
+        "name": "New Zealand",
+        "flag": "nzl"
+      }
+    ],
+    [
+      {
+        "name": "Ukraine",
+        "flag": "ukr"
+      },
+      {
+        "name": "Russia",
+        "flag": "rus"
+      }
+    ],
+    [
+      {
+        "name": "Tahiti",
+        "flag": "tah"
+      },
+      {
+        "name": "Mexico",
+        "flag": "mex"
+      }
+    ],
+    [
+      {
+        "name": "Colombia",
+        "flag": "col"
+      },
+      {
+        "name": "Japan",
+        "flag": "jpn"
+      }
+    ],
+    [
+      {
+        "name": "Honduras",
+        "flag": "hon"
+      },
+      {
+        "name": "Norway",
+        "flag": "nor"
+      }
+    ],
+    [
+      {
+        "name": "Portugal",
+        "flag": "por"
+      },
+      {
+        "name": "Poland",
+        "flag": "pol"
+      }
+    ],
+    [
+      {
+        "name": "Mali",
+        "flag": "mli"
+      },
+      {
+        "name": "USA",
+        "flag": "usa"
+      }
+    ]
+  ],
+  "results": [
+    [[1, 0], [3, 4], [2, 1], [1, 3], [1, 4], [0, 1], [1, 2], [0, 3]],
+    [[2, 0], [3, 2], [8, 6], [0, 1]],
+    [[0, 3],[2, 1]],
+    [[2, 1]]
+  ]
+}
