@@ -80,6 +80,10 @@ div.jQBracket .team.win {
     background: #77b32c61;
 }
 
+div.jQBracket .team.na {
+    background: #eee;
+}
+
 /*div.jQBracket .team.lose {*/
     /*background: #728a51;*/
 /*}*/
