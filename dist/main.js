@@ -1,4 +1,97 @@
-var customData = {
+var dataJson = {
+    "teams": [
+        [
+            {
+                "name": "Italy",
+                "flag": "ita"
+            },
+            {
+                "name": "France",
+                "flag": "fra"
+            }
+        ],
+        [
+            {
+                "name": "Greek",
+                "flag": "gre"
+            },
+            {
+                "name": "New Zealand",
+                "flag": "nzl"
+            }
+        ],
+        [
+            {
+                "name": "Ukraine",
+                "flag": "ukr"
+            },
+            {
+                "name": "Russia",
+                "flag": "rus"
+            }
+        ],
+        [
+            {
+                "name": "Tahiti",
+                "flag": "tah"
+            },
+            {
+                "name": "Mexico",
+                "flag": "mex"
+            }
+        ],
+        [
+            {
+                "name": "Colombia",
+                "flag": "col"
+            },
+            {
+                "name": "Japan",
+                "flag": "jpn"
+            }
+        ],
+        [
+            {
+                "name": "Honduras",
+                "flag": "hon"
+            },
+            {
+                "name": "Norway",
+                "flag": "nor"
+            }
+        ],
+        [
+            {
+                "name": "Portugal",
+                "flag": "por"
+            },
+            {
+                "name": "Poland",
+                "flag": "pol"
+            }
+        ],
+        [
+            {
+                "name": "Mali",
+                "flag": "mli"
+            },
+            {
+                "name": "USA",
+                "flag": "usa"
+            }
+        ]
+    ],
+    "results": [
+        [[1, 0], [3, 4], [2, 1], [1, 3], [1, 4], [0, 1], [1, 2], [0, 3]],
+        [[2, 0], [3, 2], [8, 6], [0, 1]],
+        [[0, 3],[2, 1]],
+        [[2, 1]]
+    ]
+};
+
+
+
+var matchData = {
     teams : [
         [
             {name: "Italy", flag: 'ita'},
@@ -34,28 +127,31 @@ var customData = {
         ]
     ],
     results : [
-        [[1,0], [3,4], [2,1], [1,3], [1,4], [0,1], [1,2], [0,3]]
-        // [[2,0,' 1'], [3,2,' 2'], [8,6,' 3'], [0,1,' 2']],
-        // [[0,3],[2,1]],
-        // [[2,1]]
+        [[1,0], [3,4], [2,1], [1,3], [1,4], [0,1], [1,2], [0,3]],
+        [[2,0], [3,2], [8,6], [0,1]],
+        [[0,3],[2,1]],
+        [[2,1]]
     ]
 };
 
-/* Edit function is called when team label is clicked */
+function isEmptyObject(obj) {
+    if(jQuery.isEmptyObject(obj)) {
+        return true
+    } else {
+        return false
+    }
+}
+
+$(function () {
+    if(isEmptyObject(dataJson) === true) {
+        return
+    } else {
+        matchData = dataJson;
+    }
+})
+
 function edit_fn(container, data, doneCb) {
-    // var input = $('<input type="text">')
-    // input.val(data ? data.flag + ':' + data.name : '')
-    // container.html(input)
-    // input.focus()
-    // input.blur(function() {
-    //     var inputValue = input.val()
-    //     if (inputValue.length === 0) {
-    //         doneCb(null); // Drop the team and replace with BYE
-    //     } else {
-    //         var flagAndName = inputValue.split(':') // Expects correct input
-    //         doneCb({flag: flagAndName[0], name: flagAndName[1]})
-    //     }
-    // })
+    //cant remove this function - plugin will crush
 }
 
 /* Render function is called for each team label when data is changed, data
@@ -87,7 +183,7 @@ function render_fn(container, data, score, state) {
 
 $(function() {
     $('.demo').bracket({
-        init: customData,
+        init: matchData,
         teamWidth: 170,
         scoreWidth: 30,
         matchMargin: 30,
@@ -96,16 +192,3 @@ $(function() {
         decorator: {edit: edit_fn,
             render: render_fn}})
 });
-
-
-$(function () {
-    $.getJSON('http://api.plos.org/search?q=title:%22Drosophila%22%20and%20body:%22RNA%22&fl=id&start=1&rows=100',function (json) {
-        console.log(json)
-    })
-    $.ajax({
-        url: "http://api.plos.org/search?q=title:%22Drosophila%22%20and%20body:%22RNA%22&fl=id&start=1&rows=100",
-        success: function (data) {
-            console.log(data)
-        }
-    })
-})
