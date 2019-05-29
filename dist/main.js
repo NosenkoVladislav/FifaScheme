@@ -47,43 +47,76 @@
 var matchData = {
     teams : [
         [
-            {name: "Italy", flag: 'ita'},
-            {name: "France", flag: 'fra'}
+            {name: "Мексика", flag: 'mex'},
+            {name: "Італія", flag: 'ita'}
         ],
         [
-            {name: "Greek", flag: 'gre'},
-            {name: "New Zealand", flag: 'nzl'}
+            {name: "Польща", flag: 'pol'},
+            {name: "Колумбія", flag: 'col'}
         ],
         [
-            {name: "Ukraine", flag: 'ukr'},
-            {name: "Russia", flag: 'rus'}
+            {name: "Катар", flag: 'qat'},
+            {name: "Нігерія", flag: 'nig'}
         ],
         [
-            {name: "Tahiti", flag: 'tah'},
-            {name: "Mexico", flag: 'mex'}
+            {name: "Україна", flag: 'ukr'},
+            {name: "США", flag: 'usa'}
         ],
         [
-            {name: "Colombia", flag: 'col'},
-            {name: "Japan", flag: 'jpn'}
+            {name: "Уругвай", flag: 'uru'},
+            {name: "Норвегія", flag: 'nor'}
         ],
         [
-            {name: "Honduras", flag: 'hon'},
-            {name: "Norway", flag: 'nor'}
+            {name: "Португалія", flag: 'por'},
+            {name: "Корея", flag: 'kor'}
         ],
         [
-            {name: "Portugal", flag: 'por'},
-            {name: "Poland", flag: 'pol'}
+            {name: "Еквадор", flag: 'ecu'},
+            {name: "Італія", flag: 'ita'}
         ],
         [
-            {name: "Mali", flag: 'mli'},
-            {name: "USA", flag: 'usa'}
+            {name: "Катар", flag: 'qat'},
+            {name: "Україна", flag: 'ukr'}
+        ],
+        [
+            {name: "Португалія", flag: 'por'},
+            {name: "Аргентина", flag: 'arg'}
+        ],
+        [
+            {name: "Італія", flag: 'ita'},
+            {name: "Японія", flag: 'jpn'}
+        ],
+        [
+            {name: "Сенегал", flag: 'sen'},
+            {name: "Польща", flag: 'pol'}
+        ],
+        [
+            {name: "Нова Зеландія", flag: 'nzl'},
+            {name: "Уругвай", flag: 'uru'}
+        ],
+        [
+            {name: "США", flag: 'usa'},
+            {name: "Катар", flag: 'qat'}
+        ],
+        [
+            {name: "Нігерія", flag: 'nig'},
+            {name: "Україна", flag: 'ukr'}
+        ],
+        [
+            {name: "Малі", flag: 'mli'},
+            {name: "Франція", flag: 'fra'}
+        ],
+        [
+            {name: "Корея", flag: 'kor'},
+            {name: "Аргентина", flag: 'arg'}
         ]
     ],
     results : [
-        [[1,0], [3,4], [2,1], [1,3], [1,4], [0,1], [1,2], [0,3]],
-        [[2,0], [3,2], [8,6], [0,1]],
-        [[0,3],[2,1]],
-        [[2,1]]
+        // [[1,0], [3,4], [2,1], [1,3], [1,4], [0,1], [1,2], [0,3],[0,1],[2,1],[2,1]],
+        // [[2,0], [3,2], [8,6], [0,1], [0,2],[2,1]],
+        // [[0,3],[2,1],[3,1]],
+        // [[2,1],[0,2]],
+        // [[3,2]]
     ]
 };
 
