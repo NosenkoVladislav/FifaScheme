@@ -84,6 +84,10 @@ div.jQBracket .team.na {
     background: #eee;
 }
 
+div.jQBracket .team div.score {
+    pointer-events: none;
+}
+
 /*div.jQBracket .team.lose {*/
     /*background: #728a51;*/
 /*}*/
