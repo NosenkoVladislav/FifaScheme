@@ -1,94 +1,47 @@
-var dataJson = {
-    "teams": [
-        [
-            {
-                "name": "Italy",
-                "flag": "ita"
-            },
-            {
-                "name": "France",
-                "flag": "fra"
-            }
-        ],
-        [
-            {
-                "name": "Greek",
-                "flag": "gre"
-            },
-            {
-                "name": "New Zealand",
-                "flag": "nzl"
-            }
-        ],
-        [
-            {
-                "name": "Ukraine",
-                "flag": "ukr"
-            },
-            {
-                "name": "Russia",
-                "flag": "rus"
-            }
-        ],
-        [
-            {
-                "name": "Tahiti",
-                "flag": "tah"
-            },
-            {
-                "name": "Mexico",
-                "flag": "mex"
-            }
-        ],
-        [
-            {
-                "name": "Colombia",
-                "flag": "col"
-            },
-            {
-                "name": "Japan",
-                "flag": "jpn"
-            }
-        ],
-        [
-            {
-                "name": "Honduras",
-                "flag": "hon"
-            },
-            {
-                "name": "Norway",
-                "flag": "nor"
-            }
-        ],
-        [
-            {
-                "name": "Portugal",
-                "flag": "por"
-            },
-            {
-                "name": "Poland",
-                "flag": "pol"
-            }
-        ],
-        [
-            {
-                "name": "Mali",
-                "flag": "mli"
-            },
-            {
-                "name": "USA",
-                "flag": "usa"
-            }
-        ]
-    ],
-    "results": [
-        [[1, 0], [3, 4], [2, 1], [1, 3], [1, 4], [0, 1], [1, 2], [0, 3]],
-        [[2, 0], [3, 2], [8, 6], [0, 1]],
-        [[0, 3],[2, 1]],
-        [[2, 1]]
-    ]
-};
+// var dataJson = "{teams : [[{name: \"Italy\", flag: 'ita'}, {name: \"France\", flag: 'fra'}],[{name: \"Greek\", flag: 'gre'}, {name: \"New Zealand\", flag: 'nzl'}],[ {name: \"Ukraine\", flag: 'ukr'}, {name: \"Russia\", flag: 'rus'}],[{name: \"Tahiti\", flag: 'tah'},{name: \"Mexico\", flag: 'mex'}],[{name: \"Colombia\", flag: 'col'},{name: \"Japan\", flag: 'jpn'}],[{name: \"Honduras\", flag: 'hon'},{name: \"Norway\", flag: 'nor'}],[{name: \"Portugal\", flag: 'por'},{name: \"Poland\", flag: 'pol'}], [{name: \"Mali\", flag: 'mli'},{name: \"USA\", flag: 'usa'}]]}"
 
+// var dataJson = {
+//     teams : [
+//         [
+//             {name: "Ukraine", flag: 'ukr'},
+//             {name: "France", flag: 'fra'}
+//         ],
+//         [
+//             {name: "Greek", flag: 'gre'},
+//             {name: "New Zealand", flag: 'nzl'}
+//         ],
+//         [
+//             {name: "Ukraine", flag: 'ukr'},
+//             {name: "Russia", flag: 'rus'}
+//         ],
+//         [
+//             {name: "Tahiti", flag: 'tah'},
+//             {name: "Mexico", flag: 'mex'}
+//         ],
+//         [
+//             {name: "Colombia", flag: 'col'},
+//             {name: "Japan", flag: 'jpn'}
+//         ],
+//         [
+//             {name: "Honduras", flag: 'hon'},
+//             {name: "Norway", flag: 'nor'}
+//         ],
+//         [
+//             {name: "Portugal", flag: 'por'},
+//             {name: "Poland", flag: 'pol'}
+//         ],
+//         [
+//             {name: "Mali", flag: 'mli'},
+//             {name: "USA", flag: 'usa'}
+//         ]
+//     ],
+//     results : [
+//         [[1,0], [3,4], [2,1], [1,3], [1,4], [0,1], [1,2], [0,3]],
+//         [[2,0], [3,2], [8,6], [0,1]],
+//         [[0,3],[2,1]],
+//         [[200,1]]
+//     ]
+// };
 
 
 var matchData = {
@@ -134,6 +87,15 @@ var matchData = {
     ]
 };
 
+function IsJsonString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
+
 function isEmptyObject(obj) {
     if(jQuery.isEmptyObject(obj)) {
         return true
@@ -142,13 +104,15 @@ function isEmptyObject(obj) {
     }
 }
 
-$(function () {
-    if(isEmptyObject(dataJson) === true) {
-        return
-    } else {
-        matchData = dataJson;
-    }
-})
+// $(function () {
+//     if(IsJsonString(dataJson) === true) {
+//         return
+//     } else {
+//         // matchData = dataJson;
+//         var jsonObject = jQuery.parseJSON(dataJson)
+//         console.log(jsonObject)
+//     }
+// })
 
 function edit_fn(container, data, doneCb) {
     //cant remove this function - plugin will crush
